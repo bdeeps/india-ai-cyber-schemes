@@ -9,13 +9,23 @@ import BackToTop from '../components/BackToTop'
 import HomePage from '../pages/HomePage'
 import EmptyState from '../components/EmptyState'
 import { SchemeSkeletonGrid } from '../components/SchemeSkeleton'
-import { FILTERS, SORT_OPTIONS, useFilteredSchemes } from '../hooks/useFilteredSchemes'
+import { SORT_OPTIONS, useFilteredSchemes, useSidebarRegionCounts } from '../hooks/useFilteredSchemes'
 import { useRegionLoading } from '../hooks/useRegionLoading'
 import { useEscapeKey } from '../hooks/useEscapeKey'
 import { useSchemesData } from '../hooks/useSchemesData'
 import { getTotalUniqueSchemes } from '../services/schemeService'
+import { DATASET_SUMMARY } from '../data/verifiedSchemes.js'
 
-function RegionContent({ region, filtered, searchQuery, filter, latestOnly, isInitialLoading }) {
+function RegionContent({
+  region,
+  filtered,
+  searchQuery,
+  activeFilters,
+  latestOnly,
+  includePolicies,
+  isInitialLoading,
+  onResetAll,
+}) {
   const isRegionLoading = useRegionLoading()
   const isLoading = isInitialLoading || isRegionLoading
 
@@ -23,14 +33,21 @@ function RegionContent({ region, filtered, searchQuery, filter, latestOnly, isIn
     <div className={isLoading ? '' : 'content-enter'}>
       <HomePage
         region={region}
+        stateGrantSchemes={filtered.stateGrantSchemes}
+        stateIncubatorSchemes={filtered.stateIncubatorSchemes}
+        stateStartupPrograms={filtered.stateStartupPrograms}
+        statePolicySchemes={filtered.statePolicySchemes}
+        includePolicies={includePolicies}
+        policiesOnly={filtered.policiesOnly}
         stateAiSchemes={filtered.stateAiSchemes}
         stateCybersecuritySchemes={filtered.stateCybersecuritySchemes}
         centralSchemes={filtered.centralSchemes}
         allSchemes={filtered.allSchemes}
         searchQuery={searchQuery}
-        filter={filter}
+        activeFilters={activeFilters}
         isLoading={isLoading}
         latestOnly={latestOnly}
+        onResetAll={onResetAll}
       />
     </div>
   )
@@ -79,10 +96,12 @@ export default function MainLayout() {
   const { directory, isLoading, error } = useSchemesData()
   const mainRef = useRef(null)
   const [selectedRegionId, setSelectedRegionId] = useState('')
+  const [regionCleared, setRegionCleared] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
-  const [filter, setFilter] = useState(FILTERS.ALL)
+  const [activeFilters, setActiveFilters] = useState(new Set())
   const [sortBy, setSortBy] = useState(SORT_OPTIONS.LATEST)
   const [latestOnly, setLatestOnly] = useState(false)
+  const [includePolicies, setIncludePolicies] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
 
@@ -93,20 +112,55 @@ export default function MainLayout() {
   }
 
   const defaultRegionId = directory?.states?.[0]?.id ?? ''
-  const activeRegionId = selectedRegionId || defaultRegionId
+  const activeRegionId = regionCleared ? null : selectedRegionId || defaultRegionId
 
   const selectedRegion = useMemo(
-    () => directory?.regions.find((r) => r.id === activeRegionId) ?? null,
+    () => (activeRegionId ? directory?.regions.find((r) => r.id === activeRegionId) ?? null : null),
     [directory, activeRegionId],
   )
 
-  const filtered = useFilteredSchemes(selectedRegion, directory?.centralSchemes ?? [], searchQuery, filter, sortBy, latestOnly)
+  const canClearAll =
+    activeFilters.size > 0 ||
+    searchQuery.trim().length > 0 ||
+    latestOnly ||
+    includePolicies ||
+    !regionCleared
+
+  const handleResetAll = useCallback(() => {
+    setActiveFilters(new Set())
+    setSearchQuery('')
+    setLatestOnly(false)
+    setIncludePolicies(false)
+    setSelectedRegionId('')
+    setRegionCleared(true)
+    mainRef.current?.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [])
+
+  const filtered = useFilteredSchemes(
+    selectedRegion,
+    directory?.centralSchemes ?? [],
+    searchQuery,
+    activeFilters,
+    sortBy,
+    latestOnly,
+    includePolicies,
+  )
+
+  const sidebarRegionCounts = useSidebarRegionCounts(
+    directory,
+    searchQuery,
+    activeFilters,
+    latestOnly,
+    includePolicies,
+  )
+
   const totalSchemes = directory ? getTotalUniqueSchemes(directory) : null
 
   const closeSidebar = useCallback(() => setSidebarOpen(false), [])
   useEscapeKey(closeSidebar, sidebarOpen)
 
   const handleSelectRegion = useCallback((regionId) => {
+    setRegionCleared(false)
     setSelectedRegionId(regionId)
     setSidebarOpen(false)
     mainRef.current?.scrollTo({ top: 0, behavior: 'smooth' })
@@ -148,12 +202,13 @@ export default function MainLayout() {
           country={country}
           states={states}
           unionTerritories={unionTerritories}
-          selectedRegionId={activeRegionId}
+          selectedRegionId={activeRegionId ?? ''}
           onSelectRegion={handleSelectRegion}
           isOpen={sidebarOpen}
           onClose={closeSidebar}
           collapsed={sidebarCollapsed}
           onCollapse={toggleSidebarCollapse}
+          regionCounts={sidebarRegionCounts}
         />
 
         <div className="flex min-h-0 min-w-0 flex-1 flex-col">
@@ -163,14 +218,21 @@ export default function MainLayout() {
                 <div className="min-w-0 flex-1">
                   <SearchBar value={searchQuery} onChange={setSearchQuery} />
                 </div>
-                <SortControls value={sortBy} onChange={setSortBy} resultCount={filtered.allSchemes.length} />
+                <SortControls value={sortBy} onChange={setSortBy} />
               </div>
               <FilterBar
-                value={filter}
-                onChange={setFilter}
+                activeFilters={activeFilters}
+                onChange={setActiveFilters}
                 latestOnly={latestOnly}
                 onLatestOnlyChange={setLatestOnly}
-                resultCount={filtered.allSchemes.length}
+                includePolicies={includePolicies}
+                onIncludePoliciesChange={setIncludePolicies}
+                opportunityCount={filtered.visibleOpportunityCount}
+                recordCount={filtered.allSchemes.length}
+                hiddenPolicyCount={DATASET_SUMMARY.policies}
+                filterCounts={filtered.filterCounts}
+                onClearAll={handleResetAll}
+                canClearAll={canClearAll}
               />
             </div>
           </div>
@@ -182,13 +244,15 @@ export default function MainLayout() {
             tabIndex={-1}
           >
             <RegionContent
-              key={activeRegionId}
+              key={activeRegionId ?? 'no-region'}
               region={selectedRegion}
               filtered={filtered}
               searchQuery={searchQuery}
-              filter={filter}
+              activeFilters={activeFilters}
               latestOnly={latestOnly}
+              includePolicies={includePolicies}
               isInitialLoading={false}
+              onResetAll={handleResetAll}
             />
             <Footer />
           </main>

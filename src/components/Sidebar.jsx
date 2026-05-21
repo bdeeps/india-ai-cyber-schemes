@@ -1,8 +1,7 @@
-import { getRegionSchemeCount } from '../services/schemeService'
 import { Logo } from './Logo'
 
-function RegionButton({ region, isSelected, onSelect, collapsed }) {
-  const count = getRegionSchemeCount(region)
+function RegionButton({ region, isSelected, onSelect, collapsed, visibleCount = 0 }) {
+  const count = visibleCount
 
   if (collapsed) {
     return (
@@ -55,7 +54,7 @@ function RegionButton({ region, isSelected, onSelect, collapsed }) {
   )
 }
 
-function RegionGroup({ title, regions, selectedRegionId, onSelectRegion, collapsed }) {
+function RegionGroup({ title, regions, selectedRegionId, onSelectRegion, collapsed, regionCounts }) {
   if (collapsed) {
     return (
       <ul role="listbox" aria-label={`${title} list`} className="space-y-1">
@@ -66,6 +65,7 @@ function RegionGroup({ title, regions, selectedRegionId, onSelectRegion, collaps
             isSelected={region.id === selectedRegionId}
             onSelect={onSelectRegion}
             collapsed
+            visibleCount={regionCounts[region.id] ?? 0}
           />
         ))}
       </ul>
@@ -85,6 +85,7 @@ function RegionGroup({ title, regions, selectedRegionId, onSelectRegion, collaps
             isSelected={region.id === selectedRegionId}
             onSelect={onSelectRegion}
             collapsed={false}
+            visibleCount={regionCounts[region.id] ?? 0}
           />
         ))}
       </ul>
@@ -102,6 +103,7 @@ export default function Sidebar({
   onClose,
   collapsed,
   onCollapse,
+  regionCounts = {},
 }) {
   const sidebarWidth = collapsed ? 'var(--sidebar-collapsed-width)' : 'var(--sidebar-width)'
 
@@ -166,6 +168,7 @@ export default function Sidebar({
             selectedRegionId={selectedRegionId}
             onSelectRegion={onSelectRegion}
             collapsed={collapsed}
+            regionCounts={regionCounts}
           />
           {!collapsed && <div className="mx-2 border-t border-gray-200 dark:border-[color:var(--app-border)]" />}
           <RegionGroup
@@ -174,6 +177,7 @@ export default function Sidebar({
             selectedRegionId={selectedRegionId}
             onSelectRegion={onSelectRegion}
             collapsed={collapsed}
+            regionCounts={regionCounts}
           />
         </nav>
       </aside>

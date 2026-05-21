@@ -1,29 +1,95 @@
 import { memo, useState } from 'react'
 
 const CATEGORY_STYLES = {
-  ai: {
+  'ai-initiative': {
     badge: 'bg-blue-100 text-blue-800 dark:bg-violet-500/15 dark:text-violet-300',
     accent: 'border-l-blue-600 dark:border-l-violet-500',
     label: 'AI',
     glow: 'card-glow-ai',
   },
-  cybersecurity: {
+  'cybersecurity-initiative': {
     badge: 'bg-teal-100 text-teal-800 dark:bg-cyan-500/15 dark:text-cyan-300',
     accent: 'border-l-teal-600 dark:border-l-cyan-500',
     label: 'Cybersecurity',
     glow: 'card-glow-cyber',
   },
+  grant: {
+    badge: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-500/15 dark:text-emerald-300',
+    accent: 'border-l-emerald-600 dark:border-l-emerald-500',
+    label: 'Grant',
+    glow: '',
+  },
+  incubator: {
+    badge: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-500/15 dark:text-indigo-300',
+    accent: 'border-l-indigo-600 dark:border-l-indigo-500',
+    label: 'Incubator',
+    glow: '',
+  },
+  accelerator: {
+    badge: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-500/15 dark:text-indigo-300',
+    accent: 'border-l-indigo-600 dark:border-l-indigo-500',
+    label: 'Accelerator',
+    glow: '',
+  },
+  'startup-program': {
+    badge: 'bg-orange-100 text-orange-800 dark:bg-orange-500/15 dark:text-orange-300',
+    accent: 'border-l-orange-600 dark:border-l-orange-500',
+    label: 'Startup Program',
+    glow: '',
+  },
+  policy: {
+    badge: 'bg-slate-100 text-slate-800 dark:bg-slate-500/15 dark:text-slate-300',
+    accent: 'border-l-slate-600 dark:border-l-slate-500',
+    label: 'Policy',
+    glow: '',
+  },
+  'centre-of-excellence': {
+    badge: 'bg-purple-100 text-purple-800 dark:bg-purple-500/15 dark:text-purple-300',
+    accent: 'border-l-purple-600 dark:border-l-purple-500',
+    label: 'Centre of Excellence',
+    glow: '',
+  },
+}
+
+const SOURCE_BADGE_STYLES = {
+  government: {
+    badge: 'border-blue-200 bg-blue-100 text-blue-800 dark:border-blue-500/30 dark:bg-blue-500/10 dark:text-blue-300',
+    label: 'Government Verified',
+  },
+  partner: {
+    badge: 'border-purple-200 bg-purple-100 text-purple-800 dark:border-purple-500/30 dark:bg-purple-500/10 dark:text-purple-300',
+    label: 'Partner Ecosystem',
+  },
+}
+
+const PARTNER_HOSTS = ['nasscom.in', 'cyseck.in']
+
+function getSourceHostname(scheme) {
+  const raw = scheme.sourceDomain ?? scheme.sourceUrl ?? ''
+  try {
+    return new URL(raw.includes('://') ? raw : `https://${raw}`).hostname.replace(/^www\./, '').toLowerCase()
+  } catch {
+    return String(raw).replace(/^www\./, '').toLowerCase()
+  }
+}
+
+function getSourceBadgeType(scheme) {
+  const host = getSourceHostname(scheme)
+  const isPartner = PARTNER_HOSTS.some((domain) => host === domain || host.endsWith(`.${domain}`))
+  return isPartner ? 'partner' : 'government'
 }
 
 const DESCRIPTION_LIMIT = 160
 
 function SchemeCard({ scheme, index = 0 }) {
   const [expanded, setExpanded] = useState(false)
-  const style = CATEGORY_STYLES[scheme.category] ?? CATEGORY_STYLES.ai
+  const style = CATEGORY_STYLES[scheme.category] ?? CATEGORY_STYLES['ai-initiative']
+  const sourceBadge = SOURCE_BADGE_STYLES[getSourceBadgeType(scheme)]
   const isLong = scheme.description.length > DESCRIPTION_LIMIT
   const displayDescription =
     expanded || !isLong ? scheme.description : `${scheme.description.slice(0, DESCRIPTION_LIMIT).trim()}…`
   const sourceDomain = scheme.sourceDomain ?? scheme.sourceUrl
+  const hasApplyUrl = typeof scheme.applyUrl === 'string' && scheme.applyUrl.trim().length > 0
 
   return (
     <article
@@ -32,23 +98,30 @@ function SchemeCard({ scheme, index = 0 }) {
       aria-labelledby={`scheme-title-${scheme.id}`}
     >
       <div className="mb-3 flex flex-wrap items-start justify-between gap-2">
-        <h3
-          id={`scheme-title-${scheme.id}`}
-          className="flex-1 text-sm font-semibold leading-snug text-gray-900 sm:text-base dark:text-white"
-        >
-          {scheme.title}
-        </h3>
-        <div className="flex shrink-0 flex-wrap gap-1">
-          <span className="inline-flex items-center gap-1 rounded-md border border-green-200 bg-green-100 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-green-800 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-300">
-            Verified Government Source
+        <div className="min-w-0 flex-1 space-y-1.5">
+          <h3
+            id={`scheme-title-${scheme.id}`}
+            className="text-sm font-semibold leading-snug text-gray-900 sm:text-base dark:text-white"
+          >
+            {scheme.title}
+          </h3>
+          <span
+            className={`inline-flex items-center rounded-md border px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide ${sourceBadge.badge}`}
+          >
+            {sourceBadge.label}
           </span>
+        </div>
+        <div className="flex shrink-0 flex-col items-end gap-1">
+          <p className="max-w-[11rem] truncate text-right text-[10px] text-gray-500 dark:text-slate-500" title={sourceDomain}>
+            {sourceDomain}
+          </p>
           <span className={`rounded-md px-2 py-0.5 text-[11px] font-semibold ${style.badge}`}>{style.label}</span>
         </div>
       </div>
 
       <div className="mb-3 flex flex-wrap gap-1.5">
         <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-semibold tabular-nums text-gray-700 dark:bg-white/5 dark:text-slate-300">
-          {scheme.launchYear}
+          {scheme.launchYear ?? '—'}
         </span>
         <span
           className="max-w-full truncate rounded-md bg-blue-50 px-2 py-0.5 text-xs font-medium text-blue-800 dark:bg-primary-500/10 dark:text-primary-300"
@@ -82,9 +155,9 @@ function SchemeCard({ scheme, index = 0 }) {
 
       {scheme.tags?.length > 0 && (
         <div className="mb-3 flex flex-wrap gap-1" aria-label="Scheme tags">
-          {scheme.tags.slice(0, 5).map((tag, tagIndex) => (
+          {scheme.tags.slice(0, 5).map((tag) => (
             <span
-              key={`${scheme.id}-tag-${tagIndex}`}
+              key={`${scheme.id}-tag-${tag}`}
               className="rounded-md bg-gray-100 px-2 py-0.5 text-[10px] font-medium text-gray-600 dark:bg-white/5 dark:text-slate-500"
             >
               #{tag}
@@ -94,12 +167,29 @@ function SchemeCard({ scheme, index = 0 }) {
       )}
 
       <div className="mt-auto space-y-3 border-t border-gray-200 pt-3 dark:border-[color:var(--app-border)]">
+        {hasApplyUrl ? (
+          <a
+            href={scheme.applyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg border border-green-200 bg-green-600 px-3 py-2 text-xs font-semibold text-white transition hover:bg-green-700 dark:border-emerald-500/40 dark:bg-emerald-600 dark:hover:bg-emerald-500"
+          >
+            Apply Now
+          </a>
+        ) : (
+          <button
+            type="button"
+            disabled
+            className="inline-flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-gray-300 bg-gray-400 px-3 py-2 text-xs font-semibold text-white opacity-60 dark:border-slate-600 dark:bg-slate-600 dark:text-slate-200"
+          >
+            Application Not Available
+          </button>
+        )}
         <div>
           <p className="text-[10px] font-bold uppercase tracking-wider text-gray-600 dark:text-slate-500">
             Official Source
           </p>
           <p className="mt-1 text-sm text-gray-700 dark:text-slate-300">{scheme.officialSource}</p>
-          <p className="mt-0.5 text-xs text-gray-500 dark:text-slate-500">{sourceDomain}</p>
         </div>
         <a
           href={scheme.sourceUrl}

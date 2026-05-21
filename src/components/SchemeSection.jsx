@@ -1,10 +1,10 @@
 import { memo } from 'react'
 import SchemeCard from './SchemeCard'
 
-function SchemeSection({ title, icon, schemes, accentClass, startIndex = 0 }) {
+function SchemeSection({ id, title, icon, schemes, accentClass, startIndex = 0 }) {
   if (schemes.length === 0) return null
 
-  const sectionId = `section-${title.replace(/\s+/g, '-').toLowerCase()}`
+  const sectionId = id ?? `section-${title.replace(/\s+/g, '-').toLowerCase()}`
 
   return (
     <section className="space-y-3" aria-labelledby={sectionId}>

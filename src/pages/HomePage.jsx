@@ -1,39 +1,57 @@
 import EmptyState from '../components/EmptyState'
 import SchemeSection from '../components/SchemeSection'
 import { SchemeSkeletonGrid } from '../components/SchemeSkeleton'
-import { FILTERS } from '../hooks/useFilteredSchemes'
 
-const FILTER_LABELS = {
-  [FILTERS.ALL]: '',
-  [FILTERS.AI]: ' in AI',
-  [FILTERS.CYBERSECURITY]: ' in Cybersecurity',
-  [FILTERS.STATE]: ' in State Schemes',
-  [FILTERS.CENTRAL]: ' in Central Schemes',
-}
+const NO_RESULTS_SUGGESTIONS = [
+  'Clear filters',
+  'Try another state',
+  'Enable Include Policies or use Policies filter',
+  'Remove Apply Available filter',
+  'Remove category filters',
+]
 
 export default function HomePage({
   region,
+  stateGrantSchemes,
+  stateIncubatorSchemes,
+  stateStartupPrograms,
+  statePolicySchemes,
   stateAiSchemes,
   stateCybersecuritySchemes,
   centralSchemes,
   allSchemes,
-  searchQuery,
-  filter,
   isLoading,
   latestOnly,
+  includePolicies,
+  policiesOnly = false,
+  onResetAll,
 }) {
   if (!region) {
     return (
       <EmptyState
         icon="empty"
         title="Select a region"
-        message="Choose a state or union territory from the sidebar to browse cybersecurity and AI schemes."
+        message="Choose a state or union territory from the sidebar to browse government schemes and initiatives."
       />
     )
   }
 
   const regionLabel = region.type === 'ut' ? 'Union Territory' : 'State'
-  const stateSchemeTotal = stateAiSchemes.length + stateCybersecuritySchemes.length
+  const stateSchemeTotal =
+    stateGrantSchemes.length +
+    stateIncubatorSchemes.length +
+    stateStartupPrograms.length +
+    statePolicySchemes.length +
+    stateAiSchemes.length +
+    stateCybersecuritySchemes.length
+
+  const grantStart = 0
+  const incubatorStart = grantStart + stateGrantSchemes.length
+  const startupStart = incubatorStart + stateIncubatorSchemes.length
+  const policyStart = startupStart + stateStartupPrograms.length
+  const aiStart = policyStart + statePolicySchemes.length
+  const cyberStart = aiStart + stateAiSchemes.length
+  const centralStart = cyberStart + stateCybersecuritySchemes.length
 
   if (isLoading) {
     return (
@@ -67,30 +85,80 @@ export default function HomePage({
               <strong className="text-gray-700 dark:text-slate-200">{centralSchemes.length}</strong> central
             </span>
             {latestOnly && <span className="text-primary-700 dark:text-primary-400">Latest only</span>}
+            {includePolicies && <span className="text-primary-700 dark:text-primary-400">Policies included</span>}
           </div>
         </div>
       </div>
 
       {allSchemes.length === 0 ? (
         <EmptyState
-          title="No schemes found"
-          message={
-            searchQuery
-              ? `No results for "${searchQuery}"${FILTER_LABELS[filter] ?? ''}. Try adjusting your search, filters, or turn off "Latest schemes only".`
-              : `No schemes match the current filters${FILTER_LABELS[filter] ?? ''}. Try selecting a different filter or disable "Latest schemes only".`
-          }
+          title="No matching initiatives found"
+          suggestions={NO_RESULTS_SUGGESTIONS}
+          actionLabel="Reset Filters"
+          onAction={onResetAll}
         />
       ) : (
         <div className="space-y-6">
-          {stateSchemeTotal === 0 && (
+          {stateSchemeTotal === 0 && centralSchemes.length === 0 && (
             <p className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-4 py-3 text-sm text-gray-600 dark:border-[color:var(--app-border)] dark:bg-white/5 dark:text-slate-400">
-              No verified state-specific initiatives found
+              No verified state-specific initiatives found for {region.name}
             </p>
           )}
+
+          <SchemeSection
+            title="State Grants & Funding"
+            schemes={stateGrantSchemes}
+            startIndex={grantStart}
+            accentClass="bg-emerald-100 text-emerald-800 dark:bg-emerald-500/15 dark:text-emerald-300"
+            icon={
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            }
+          />
+
+          <SchemeSection
+            title="State Incubators & Accelerators"
+            schemes={stateIncubatorSchemes}
+            startIndex={incubatorStart}
+            accentClass="bg-indigo-100 text-indigo-800 dark:bg-indigo-500/15 dark:text-indigo-300"
+            icon={
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            }
+          />
+
+          <SchemeSection
+            title="State Startup Programs"
+            schemes={stateStartupPrograms}
+            startIndex={startupStart}
+            accentClass="bg-orange-100 text-orange-800 dark:bg-orange-500/15 dark:text-orange-300"
+            icon={
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            }
+          />
+
+          {(includePolicies || policiesOnly) && statePolicySchemes.length > 0 && (
+            <SchemeSection
+              title="State Policies"
+              schemes={statePolicySchemes}
+              startIndex={policyStart}
+              accentClass="bg-slate-100 text-slate-800 dark:bg-slate-500/15 dark:text-slate-300"
+              icon={
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              }
+            />
+          )}
+
           <SchemeSection
             title="State AI Schemes"
             schemes={stateAiSchemes}
-            startIndex={0}
+            startIndex={aiStart}
             accentClass="bg-blue-100 text-blue-800 dark:bg-violet-500/15 dark:text-violet-300"
             icon={
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -102,8 +170,8 @@ export default function HomePage({
           <SchemeSection
             title="State Cybersecurity Schemes"
             schemes={stateCybersecuritySchemes}
-            startIndex={stateAiSchemes.length}
-            accentClass="bg-teal-100 text-teal-800 dark:bg-cyan-500/15 dark:text-cyan-300"
+            startIndex={cyberStart}
+            accentClass="bg-teal-100 text-teal-800 dark:bg-cyan-500/15 dark:text-teal-300"
             icon={
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -114,7 +182,7 @@ export default function HomePage({
           <SchemeSection
             title="Central Government Initiatives"
             schemes={centralSchemes}
-            startIndex={stateAiSchemes.length + stateCybersecuritySchemes.length}
+            startIndex={centralStart}
             accentClass="bg-amber-100 text-amber-800 dark:bg-amber-500/15 dark:text-amber-300"
             icon={
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

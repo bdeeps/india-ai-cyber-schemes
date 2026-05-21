@@ -1,0 +1,1693 @@
+{
+  "generatedFrom": "VERIFIED_SCHEMES",
+  "generatedAt": "2026-05-21T07:32:57.431Z",
+  "summary": {
+    "totalSchemes": 70,
+    "totalCentralSchemes": 21,
+    "totalStateSchemes": 49,
+    "opportunitySchemes": 33,
+    "policyRecords": 37,
+    "opportunityPercentage": 47.14,
+    "policyPercentage": 52.86,
+    "policies": 37,
+    "grants": 13,
+    "incubators": 5,
+    "accelerators": 3,
+    "startupPrograms": 2,
+    "aiInitiatives": 1,
+    "cybersecurityInitiatives": 5,
+    "centreOfExcellence": 4,
+    "withApplyUrl": 8,
+    "withoutApplyUrl": 62,
+    "sourceDomainsUsed": [
+      "aim.gov.in",
+      "birac.nic.in",
+      "cert-in.org.in",
+      "csirt.tn.gov.in",
+      "csk.gov.in",
+      "cyseck.in",
+      "eitbt.karnataka.gov.in",
+      "indiaai.gov.in",
+      "industries.delhi.gov.in",
+      "invest.telangana.gov.in",
+      "itmission.kerala.gov.in",
+      "ladakh.gov.in",
+      "lakshadweep.gov.in",
+      "maarg.startupindia.gov.in",
+      "meity.gov.in",
+      "mha.gov.in",
+      "msh.meity.gov.in",
+      "nasscom.in",
+      "nidhi.dst.gov.in",
+      "seedfund.startupindia.gov.in",
+      "spc.tn.gov.in",
+      "startup.telangana.gov.in",
+      "startupindia.gov.in",
+      "startupmission.kerala.gov.in",
+      "tdb.gov.in"
+    ]
+  },
+  "uiSummary": {
+    "visibleOpportunities": 33,
+    "visiblePolicies": 0,
+    "hiddenPolicies": 37,
+    "sidebarCounts": {
+      "Andhra Pradesh": 0,
+      "Arunachal Pradesh": 0,
+      "Assam": 0,
+      "Bihar": 0,
+      "Chhattisgarh": 0,
+      "Goa": 0,
+      "Gujarat": 0,
+      "Haryana": 0,
+      "Himachal Pradesh": 0,
+      "Jharkhand": 0,
+      "Karnataka": 5,
+      "Kerala": 4,
+      "Madhya Pradesh": 0,
+      "Maharashtra": 0,
+      "Manipur": 0,
+      "Meghalaya": 0,
+      "Mizoram": 0,
+      "Nagaland": 0,
+      "Odisha": 0,
+      "Punjab": 0,
+      "Rajasthan": 0,
+      "Sikkim": 0,
+      "Tamil Nadu": 1,
+      "Telangana": 1,
+      "Tripura": 0,
+      "Uttar Pradesh": 0,
+      "Uttarakhand": 0,
+      "West Bengal": 0,
+      "Andaman and Nicobar Islands": 0,
+      "Chandigarh": 0,
+      "Dadra and Nagar Haveli and Daman and Diu": 0,
+      "Delhi (NCT)": 0,
+      "Jammu and Kashmir": 0,
+      "Ladakh": 0,
+      "Lakshadweep": 1,
+      "Puducherry": 0
+    },
+    "filterCounts": {
+      "grants": 13,
+      "incubators": 5,
+      "accelerators": 3,
+      "startup-programs": 2,
+      "policies": 37,
+      "apply-available": 8
+    },
+    "sidebarCountLogic": "State/UT sidebar counts: filtered state schemes only (excludes central). Excludes policy unless Include Policies is enabled."
+  },
+  "qualityAudit": {
+    "brokenUrls": [],
+    "duplicateEntries": [],
+    "homepageUrls": [],
+    "invalidApplyUrls": [],
+    "misclassifiedEntries": [],
+    "temporarilyUnreachableApplyUrls": [
+      {
+        "id": "karnataka-elevate-2025",
+        "field": "applyUrl",
+        "url": "https://registration.eitbt.karnataka.gov.in/ktechregistration/dist/#/auth/login",
+        "status": 0,
+        "error": "Command failed: curl -sL -o /dev/null -w \"%{http_code}\" --max-time 15 \"https://registration.eitbt.karnataka.gov.in/ktechregistration/dist/#/auth/login\"",
+        "finalUrl": null
+      }
+    ],
+    "applyReachabilityStatus": {
+      "karnataka-elevate-2025": "temporarily_unreachable"
+    }
+  },
+  "regions": [
+    {
+      "state": "Andaman and Nicobar Islands",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "andaman-nicobar-innovation-policy",
+          "title": "Andaman & Nicobar Innovation Policy",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Industries Department",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Andaman-and-Nicobar-Islands-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Andhra Pradesh",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "andhra-pradesh-startup-policy-2024-2029",
+          "title": "Andhra Pradesh Innovation & Startup Policy 2024-2029",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Information Technology, Electronics & Communication",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Andhra-Pradesh-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Arunachal Pradesh",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "arunachal-pradesh-startup-policy-2022-23",
+          "title": "Arunachal Pradesh STARTUP POLICY 2022-23",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Finance, Planning & Investment",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Arunachal-Pradesh-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Assam",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "assam-startup-policy-2017-2022",
+          "title": "Assam Startup Policy 2017-2022",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Industries & Commerce",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Assam-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Bihar",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "bihar-startup-policy-2022-2027",
+          "title": "Bihar Startup Policy 2022-2027",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Industries",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Bihar-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Chandigarh",
+      "totalSchemes": 0,
+      "dataStatusReason": "No verified state opportunities found.",
+      "schemes": []
+    },
+    {
+      "state": "Chhattisgarh",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "chhattisgarh-startup-policy-2024-2030",
+          "title": "Startup Policy 2024-2030",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Commerce & Industries",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Chhattisgarh-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Dadra and Nagar Haveli and Daman and Diu",
+      "totalSchemes": 0,
+      "dataStatusReason": "No verified state opportunities found.",
+      "schemes": []
+    },
+    {
+      "state": "Delhi (NCT)",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "delhi-draft-startup-policy",
+          "title": "Draft Delhi Start-up Policy",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Industries, Government of NCT of Delhi",
+          "officialSource": "Department of Industries, GNCTD",
+          "sourceUrl": "https://industries.delhi.gov.in/industries/public-notice-draft-delhi-start-policy",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Goa",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "goa-startup-policy-2021-25",
+          "title": "Goa Startup Policy 2021-25",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Information Technology",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Goa-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Gujarat",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "gujarat-industrial-policy-2020-startup",
+          "title": "Gujarat Industrial Policy 2020",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Industries Commissionerate, Government of Gujarat",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Gujarat-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Haryana",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "haryana-state-startup-policy-2022",
+          "title": "Haryana State Startup Policy 2022",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Industries and Commerce, Haryana",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Haryana-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Himachal Pradesh",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "himachal-startup-innovation-scheme-2016",
+          "title": "Chief Minister's Startup/Innovation/Projects/New Industries Scheme 2016",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Industries",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Himachal-Pradesh-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Jammu and Kashmir",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "jammu-kashmir-startup-policy-2024-2027",
+          "title": "Jammu & Kashmir Startup Policy 2024- 2027",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Jammu & Kashmir Entrepreneurship Development Institute (JKEDI)",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Jammu-and-Kashmir-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Jharkhand",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "jharkhand-startup-policy-2016-2021",
+          "title": "Jharkhand Startup Policy 2016-2021",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Information Technology and E-Governance",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Jharkhand-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Karnataka",
+      "totalSchemes": 7,
+      "dataStatusReason": "Verified opportunities available.",
+      "schemes": [
+        {
+          "id": "karnataka-coe-minro",
+          "title": "Centre of Excellence for Machine Intelligence and Robotics (CoE-MINRO)",
+          "category": "centre-of-excellence",
+          "schemeType": "State",
+          "department": "Department of Electronics, IT, BT and Science & Technology, Government of Karnataka",
+          "officialSource": "K-tech / EITBT Karnataka",
+          "sourceUrl": "https://eitbt.karnataka.gov.in/it/public/129/minro-%28machine-intelligence-and-robotics%29/en",
+          "applyUrl": null,
+          "applyStatus": null
+        },
+        {
+          "id": "karnataka-coe-automotive-tech",
+          "title": "Centre of Excellence in Automotive Technology",
+          "category": "centre-of-excellence",
+          "schemeType": "State",
+          "department": "Department of Electronics, IT, BT and Science & Technology, Government of Karnataka",
+          "officialSource": "K-tech / EITBT Karnataka",
+          "sourceUrl": "https://eitbt.karnataka.gov.in/esdm/public/129/coe-automotive-tech/en",
+          "applyUrl": null,
+          "applyStatus": null
+        },
+        {
+          "id": "karnataka-cyseck-coe-cybersecurity",
+          "title": "CySecK - Centre of Excellence in Cybersecurity",
+          "category": "centre-of-excellence",
+          "schemeType": "State",
+          "department": "Department of Electronics, IT and BT, Government of Karnataka",
+          "officialSource": "CySecK Official Portal",
+          "sourceUrl": "https://cyseck.in/industry-and-startups",
+          "applyUrl": null,
+          "applyStatus": null
+        },
+        {
+          "id": "karnataka-elevate-2025",
+          "title": "ELEVATE 2025",
+          "category": "grant",
+          "schemeType": "State",
+          "department": "Department of Electronics, IT, BT and Science & Technology, Government of Karnataka",
+          "officialSource": "Startup Karnataka",
+          "sourceUrl": "https://eitbt.karnataka.gov.in/startup/public/135/elevate---2025/en",
+          "applyUrl": "https://registration.eitbt.karnataka.gov.in/ktechregistration/dist/#/auth/login",
+          "applyStatus": "temporarily_unreachable"
+        },
+        {
+          "id": "karnataka-ktech-coe-ai-c-camp",
+          "title": "K-tech CoE - AI C-CAMP",
+          "category": "centre-of-excellence",
+          "schemeType": "State",
+          "department": "Department of Electronics, IT, BT and Science & Technology, Government of Karnataka",
+          "officialSource": "K-tech / EITBT Karnataka",
+          "sourceUrl": "https://eitbt.karnataka.gov.in/168/k-tech-coe---ai-c-camp/en",
+          "applyUrl": null,
+          "applyStatus": null
+        },
+        {
+          "id": "karnataka-cyber-security-policy-2024",
+          "title": "Karnataka Cyber Security Policy 2024",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Electronics, Information Technology, Biotechnology and Science & Technology, Government of Karnataka",
+          "officialSource": "Government of Karnataka",
+          "sourceUrl": "https://eitbt.karnataka.gov.in/178/cybersecurity-policy-2024---incentives-application/en",
+          "applyUrl": null,
+          "applyStatus": null,
+          "subcategory": "cybersecurity-policy"
+        },
+        {
+          "id": "karnataka-startup-policy-2015-2020",
+          "title": "Karnataka Startup Policy 2015-2020",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Information Technology, Biotechnology and Science & Technology, Government of Karnataka",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Karnataka-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Kerala",
+      "totalSchemes": 5,
+      "dataStatusReason": "Verified opportunities available.",
+      "schemes": [
+        {
+          "id": "kerala-acceleration-programme",
+          "title": "Acceleration Programme (GrowthX & LeapX)",
+          "category": "accelerator",
+          "schemeType": "State",
+          "department": "Kerala Startup Mission",
+          "officialSource": "Kerala Startup Mission",
+          "sourceUrl": "https://startupmission.kerala.gov.in/schemes/incubation-acceleration#acceleration",
+          "applyUrl": "https://leapx.startupmission.in/applynow",
+          "applyStatus": null
+        },
+        {
+          "id": "kerala-cert-k",
+          "title": "Computer Emergency Response Team-Kerala (CERT-K)",
+          "category": "cybersecurity-initiative",
+          "schemeType": "State",
+          "department": "Electronics & Information Technology Department, Government of Kerala",
+          "officialSource": "Kerala State IT Mission (KSITM)",
+          "sourceUrl": "https://itmission.kerala.gov.in/projects/cert-kerala-cert-k",
+          "applyUrl": null,
+          "applyStatus": null
+        },
+        {
+          "id": "kerala-idea-grant-ksum",
+          "title": "Idea Grant",
+          "category": "grant",
+          "schemeType": "State",
+          "department": "Kerala Startup Mission",
+          "officialSource": "Kerala Startup Mission",
+          "sourceUrl": "https://startupmission.kerala.gov.in/schemes/idea-grant",
+          "applyUrl": "https://grants.startupmission.in",
+          "applyStatus": null
+        },
+        {
+          "id": "kerala-incubation-programme",
+          "title": "Incubation Programme (SparkX)",
+          "category": "incubator",
+          "schemeType": "State",
+          "department": "Kerala Startup Mission",
+          "officialSource": "Kerala Startup Mission",
+          "sourceUrl": "https://startupmission.kerala.gov.in/schemes/incubation-acceleration#incubation",
+          "applyUrl": null,
+          "applyStatus": null
+        },
+        {
+          "id": "kerala-startup-policy-2017",
+          "title": "Kerala Startup Policy 2017",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Kerala Startup Mission",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Kerala-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Ladakh",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "ladakh-stp-policy-2024",
+          "title": "Ladakh STP Policy, 2024",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Industries & Commerce, UT Ladakh",
+          "officialSource": "UT Administration of Ladakh",
+          "sourceUrl": "https://ladakh.gov.in/document/ladakh-stp-policy-2024/",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Lakshadweep",
+      "totalSchemes": 1,
+      "dataStatusReason": "Verified opportunities available.",
+      "schemes": [
+        {
+          "id": "lakshadweep-capital-investment-subsidy",
+          "title": "25% Capital Investment Subsidy Scheme for Micro and Small Entrepreneurial Units",
+          "category": "grant",
+          "schemeType": "State",
+          "department": "Department of Industries, UT Lakshadweep",
+          "officialSource": "Lakshadweep Administration",
+          "sourceUrl": "https://lakshadweep.gov.in/notice/revised-guidelines-for-providing-25-capital-investment-subsidy-scheme-to-micro-and-small-entrepreneural-units/",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Madhya Pradesh",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "madhya-pradesh-startup-policy-2022",
+          "title": "Madhya Pradesh Startup Policy 2022",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of MSME",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Madhya-Pradesh-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Maharashtra",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "maharashtra-startup-policy-2018-2023",
+          "title": "Maharashtra Startup Policy 2018-2023",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Government of Maharashtra",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Maharashtra-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Manipur",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "manipur-startup-scheme-2-policy-2022",
+          "title": "Manipur Startup Scheme 2.0 Policy 2022",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Planning Department, Government of Manipur",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Manipur-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Meghalaya",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "meghalaya-startup-policy-2018-2023",
+          "title": "Meghalaya Startup Policy 2018-2023",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Planning & Finance",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Meghalaya-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Mizoram",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "mizoram-entrepreneurship-startup-policy-2019",
+          "title": "MIZORAM ENTREPRENEURSHIP & STARTUP POLICY, 2019",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Planning & Programme Implementation Department, Government of Mizoram",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Mizoram-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Nagaland",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "nagaland-startup-policy-2019",
+          "title": "Nagaland Startup Policy 2019",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Industries & Commerce, Government of Nagaland",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Nagaland-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Odisha",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "odisha-startup-policy-2016-2020",
+          "title": "Odisha Startup Policy 2016-2020",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Micro, Small & Medium Enterprises",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Odisha-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Puducherry",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "puducherry-innovations-startup-policy-2019",
+          "title": "Puducherry - Innovations & Startup Policy 2019",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Industries and Commerce, Puducherry",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Puducherry-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Punjab",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "punjab-industrial-business-development-policy-2017-2022",
+          "title": "Industrial & Business Development Policy 2017-2022",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Industries & Commerce, Government of Punjab",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Punjab-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Rajasthan",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "rajasthan-startup-policy-2015-2020",
+          "title": "Rajasthan Startup Policy 2015-2020",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Information Technology & Communication",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Rajasthan-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Sikkim",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "sikkim-chief-ministers-startup-scheme",
+          "title": "Chief Ministers Startup Scheme (CMSS)",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Commerce & Industries",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Sikkim-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Tamil Nadu",
+      "totalSchemes": 4,
+      "dataStatusReason": "Verified AI/cyber initiatives available.",
+      "schemes": [
+        {
+          "id": "tamil-nadu-csirt-tn-mission",
+          "title": "CSIRT-TN Mission",
+          "category": "cybersecurity-initiative",
+          "schemeType": "State",
+          "department": "Government of Tamil Nadu",
+          "officialSource": "CSIRT-TN",
+          "sourceUrl": "https://csirt.tn.gov.in/mission.html",
+          "applyUrl": null,
+          "applyStatus": null
+        },
+        {
+          "id": "tamil-nadu-cyber-security-policy-2020",
+          "title": "Tamil Nadu Cyber Security Policy 2020",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Information Technology and Digital Services Department, Government of Tamil Nadu",
+          "officialSource": "Tamil Nadu State Planning Commission (SPC)",
+          "sourceUrl": "https://spc.tn.gov.in/policy/tamil-nadu-cybersecurity-policy-2020/",
+          "applyUrl": null,
+          "applyStatus": null,
+          "subcategory": "cybersecurity-policy"
+        },
+        {
+          "id": "tamil-nadu-safe-ethical-ai-policy-2020",
+          "title": "Tamil Nadu Safe and Ethical Artificial Intelligence Policy 2020",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Information Technology and Digital Services Department, Government of Tamil Nadu",
+          "officialSource": "Tamil Nadu State Planning Commission (SPC)",
+          "sourceUrl": "https://spc.tn.gov.in/policy/tamil-nadu-safe-and-ethical-artificial-intelligence-policy-2020/",
+          "applyUrl": null,
+          "applyStatus": null,
+          "subcategory": "ai-policy"
+        },
+        {
+          "id": "tamil-nadu-startup-innovation-policy-2018-2023",
+          "title": "Tamil Nadu Startup & Innovation Policy 2018 - 2023",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of MSME",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Tamil-Nadu-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Telangana",
+      "totalSchemes": 3,
+      "dataStatusReason": "Verified opportunities available.",
+      "schemes": [
+        {
+          "id": "telangana-tspark-grants",
+          "title": "Grants (T-Spark / TSIRI)",
+          "category": "grant",
+          "schemeType": "State",
+          "department": "Startup Telangana",
+          "officialSource": "Startup Telangana",
+          "sourceUrl": "https://startup.telangana.gov.in/grants/",
+          "applyUrl": "https://startup.telangana.gov.in/portal/user/signup",
+          "applyStatus": null
+        },
+        {
+          "id": "telangana-innovation-policy-2016",
+          "title": "Telangana Innovation Policy 2016",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Information Technology, Electronics & Communications Department",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Telangana-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        },
+        {
+          "id": "telangana-ai-framework-2020",
+          "title": "Telangana's AI Framework 2020",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Information Technology, Electronics & Communications Department, Government of Telangana",
+          "officialSource": "Government of Telangana",
+          "sourceUrl": "https://invest.telangana.gov.in/emerging-technologies/",
+          "applyUrl": null,
+          "applyStatus": null,
+          "subcategory": "ai-policy"
+        }
+      ]
+    },
+    {
+      "state": "Tripura",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "tripura-it-startup-scheme-2019",
+          "title": "IT Startup Scheme 2019",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Directorate of Information Technology, Government of Tripura",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Tripura-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Uttar Pradesh",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "uttar-pradesh-startup-policy-2020",
+          "title": "Uttar Pradesh Startup Policy 2020",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of IT & Electronics, Government of Uttar Pradesh",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Uttar-Pradesh-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "Uttarakhand",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "uttarakhand-state-startup-policy-2023",
+          "title": "Uttarakhand State Startup Policy-2023",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of MSME",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Uttarakhand-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    },
+    {
+      "state": "West Bengal",
+      "totalSchemes": 1,
+      "dataStatusReason": "Only policy-level information available.",
+      "schemes": [
+        {
+          "id": "west-bengal-startup-policy-2016-2021",
+          "title": "Start-up Policy 2016-2021",
+          "category": "policy",
+          "schemeType": "State",
+          "department": "Department of Micro, Small & Medium Enterprises & Textiles, Government of West Bengal",
+          "officialSource": "Startup India State Policies",
+          "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/West-Bengal-state-policy.html",
+          "applyUrl": null,
+          "applyStatus": null
+        }
+      ]
+    }
+  ],
+  "schemes": [
+    {
+      "id": "central-startup-india-seed-fund-scheme",
+      "title": "Startup India Seed Fund Scheme (SISFS)",
+      "category": "grant",
+      "schemeType": "Central",
+      "department": "Department for Promotion of Industry and Internal Trade (DPIIT)",
+      "officialSource": "Startup India",
+      "sourceUrl": "https://seedfund.startupindia.gov.in/",
+      "applyUrl": "https://seedfund.startupindia.gov.in/",
+      "applyStatus": null
+    },
+    {
+      "id": "central-credit-guarantee-scheme-for-startups",
+      "title": "Credit Guarantee Scheme for Startups (CGSS)",
+      "category": "grant",
+      "schemeType": "Central",
+      "department": "Department for Promotion of Industry and Internal Trade (DPIIT)",
+      "officialSource": "Startup India",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/credit-guarantee-scheme-for-startups.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-tdb-empowering-tech-startups",
+      "title": "Call for proposal: Empowering Tech Startups Ready for Commercialization",
+      "category": "grant",
+      "schemeType": "Central",
+      "department": "Technology Development Board, Department of Science and Technology",
+      "officialSource": "Technology Development Board",
+      "sourceUrl": "https://www.tdb.gov.in/call-proposal-empowering-tech-startups",
+      "applyUrl": "https://www.tdb.gov.in/call-proposal-empowering-tech-startups",
+      "applyStatus": null
+    },
+    {
+      "id": "central-atal-incubation-centres-aim",
+      "title": "Atal Incubation Centres (AIC)",
+      "category": "incubator",
+      "schemeType": "Central",
+      "department": "Atal Innovation Mission, NITI Aayog",
+      "officialSource": "Atal Innovation Mission",
+      "sourceUrl": "https://aim.gov.in/atal-incubation-centres.php",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "kerala-idea-grant-ksum",
+      "title": "Idea Grant",
+      "category": "grant",
+      "schemeType": "State",
+      "department": "Kerala Startup Mission",
+      "officialSource": "Kerala Startup Mission",
+      "sourceUrl": "https://startupmission.kerala.gov.in/schemes/idea-grant",
+      "applyUrl": "https://grants.startupmission.in",
+      "applyStatus": null
+    },
+    {
+      "id": "kerala-incubation-programme",
+      "title": "Incubation Programme (SparkX)",
+      "category": "incubator",
+      "schemeType": "State",
+      "department": "Kerala Startup Mission",
+      "officialSource": "Kerala Startup Mission",
+      "sourceUrl": "https://startupmission.kerala.gov.in/schemes/incubation-acceleration#incubation",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "kerala-acceleration-programme",
+      "title": "Acceleration Programme (GrowthX & LeapX)",
+      "category": "accelerator",
+      "schemeType": "State",
+      "department": "Kerala Startup Mission",
+      "officialSource": "Kerala Startup Mission",
+      "sourceUrl": "https://startupmission.kerala.gov.in/schemes/incubation-acceleration#acceleration",
+      "applyUrl": "https://leapx.startupmission.in/applynow",
+      "applyStatus": null
+    },
+    {
+      "id": "telangana-tspark-grants",
+      "title": "Grants (T-Spark / TSIRI)",
+      "category": "grant",
+      "schemeType": "State",
+      "department": "Startup Telangana",
+      "officialSource": "Startup Telangana",
+      "sourceUrl": "https://startup.telangana.gov.in/grants/",
+      "applyUrl": "https://startup.telangana.gov.in/portal/user/signup",
+      "applyStatus": null
+    },
+    {
+      "id": "lakshadweep-capital-investment-subsidy",
+      "title": "25% Capital Investment Subsidy Scheme for Micro and Small Entrepreneurial Units",
+      "category": "grant",
+      "schemeType": "State",
+      "department": "Department of Industries, UT Lakshadweep",
+      "officialSource": "Lakshadweep Administration",
+      "sourceUrl": "https://lakshadweep.gov.in/notice/revised-guidelines-for-providing-25-capital-investment-subsidy-scheme-to-micro-and-small-entrepreneural-units/",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "delhi-draft-startup-policy",
+      "title": "Draft Delhi Start-up Policy",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Industries, Government of NCT of Delhi",
+      "officialSource": "Department of Industries, GNCTD",
+      "sourceUrl": "https://industries.delhi.gov.in/industries/public-notice-draft-delhi-start-policy",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "ladakh-stp-policy-2024",
+      "title": "Ladakh STP Policy, 2024",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Industries & Commerce, UT Ladakh",
+      "officialSource": "UT Administration of Ladakh",
+      "sourceUrl": "https://ladakh.gov.in/document/ladakh-stp-policy-2024/",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "andhra-pradesh-startup-policy-2024-2029",
+      "title": "Andhra Pradesh Innovation & Startup Policy 2024-2029",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Information Technology, Electronics & Communication",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Andhra-Pradesh-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "arunachal-pradesh-startup-policy-2022-23",
+      "title": "Arunachal Pradesh STARTUP POLICY 2022-23",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Finance, Planning & Investment",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Arunachal-Pradesh-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "assam-startup-policy-2017-2022",
+      "title": "Assam Startup Policy 2017-2022",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Industries & Commerce",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Assam-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "bihar-startup-policy-2022-2027",
+      "title": "Bihar Startup Policy 2022-2027",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Industries",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Bihar-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "chhattisgarh-startup-policy-2024-2030",
+      "title": "Startup Policy 2024-2030",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Commerce & Industries",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Chhattisgarh-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "goa-startup-policy-2021-25",
+      "title": "Goa Startup Policy 2021-25",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Information Technology",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Goa-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "gujarat-industrial-policy-2020-startup",
+      "title": "Gujarat Industrial Policy 2020",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Industries Commissionerate, Government of Gujarat",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Gujarat-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "haryana-state-startup-policy-2022",
+      "title": "Haryana State Startup Policy 2022",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Industries and Commerce, Haryana",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Haryana-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "himachal-startup-innovation-scheme-2016",
+      "title": "Chief Minister's Startup/Innovation/Projects/New Industries Scheme 2016",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Industries",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Himachal-Pradesh-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "jharkhand-startup-policy-2016-2021",
+      "title": "Jharkhand Startup Policy 2016-2021",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Information Technology and E-Governance",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Jharkhand-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "karnataka-startup-policy-2015-2020",
+      "title": "Karnataka Startup Policy 2015-2020",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Information Technology, Biotechnology and Science & Technology, Government of Karnataka",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Karnataka-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "kerala-startup-policy-2017",
+      "title": "Kerala Startup Policy 2017",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Kerala Startup Mission",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Kerala-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "madhya-pradesh-startup-policy-2022",
+      "title": "Madhya Pradesh Startup Policy 2022",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of MSME",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Madhya-Pradesh-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "maharashtra-startup-policy-2018-2023",
+      "title": "Maharashtra Startup Policy 2018-2023",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Government of Maharashtra",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Maharashtra-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "manipur-startup-scheme-2-policy-2022",
+      "title": "Manipur Startup Scheme 2.0 Policy 2022",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Planning Department, Government of Manipur",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Manipur-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "meghalaya-startup-policy-2018-2023",
+      "title": "Meghalaya Startup Policy 2018-2023",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Planning & Finance",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Meghalaya-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "mizoram-entrepreneurship-startup-policy-2019",
+      "title": "MIZORAM ENTREPRENEURSHIP & STARTUP POLICY, 2019",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Planning & Programme Implementation Department, Government of Mizoram",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Mizoram-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "nagaland-startup-policy-2019",
+      "title": "Nagaland Startup Policy 2019",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Industries & Commerce, Government of Nagaland",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Nagaland-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "odisha-startup-policy-2016-2020",
+      "title": "Odisha Startup Policy 2016-2020",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Micro, Small & Medium Enterprises",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Odisha-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "punjab-industrial-business-development-policy-2017-2022",
+      "title": "Industrial & Business Development Policy 2017-2022",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Industries & Commerce, Government of Punjab",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Punjab-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "rajasthan-startup-policy-2015-2020",
+      "title": "Rajasthan Startup Policy 2015-2020",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Information Technology & Communication",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Rajasthan-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "sikkim-chief-ministers-startup-scheme",
+      "title": "Chief Ministers Startup Scheme (CMSS)",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Commerce & Industries",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Sikkim-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "tamil-nadu-startup-innovation-policy-2018-2023",
+      "title": "Tamil Nadu Startup & Innovation Policy 2018 - 2023",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of MSME",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Tamil-Nadu-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "telangana-innovation-policy-2016",
+      "title": "Telangana Innovation Policy 2016",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Information Technology, Electronics & Communications Department",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Telangana-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "tripura-it-startup-scheme-2019",
+      "title": "IT Startup Scheme 2019",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Directorate of Information Technology, Government of Tripura",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Tripura-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "uttar-pradesh-startup-policy-2020",
+      "title": "Uttar Pradesh Startup Policy 2020",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of IT & Electronics, Government of Uttar Pradesh",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Uttar-Pradesh-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "uttarakhand-state-startup-policy-2023",
+      "title": "Uttarakhand State Startup Policy-2023",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of MSME",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Uttarakhand-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "west-bengal-startup-policy-2016-2021",
+      "title": "Start-up Policy 2016-2021",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Micro, Small & Medium Enterprises & Textiles, Government of West Bengal",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/West-Bengal-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "andaman-nicobar-innovation-policy",
+      "title": "Andaman & Nicobar Innovation Policy",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Industries Department",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Andaman-and-Nicobar-Islands-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "jammu-kashmir-startup-policy-2024-2027",
+      "title": "Jammu & Kashmir Startup Policy 2024- 2027",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Jammu & Kashmir Entrepreneurship Development Institute (JKEDI)",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Jammu-and-Kashmir-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "puducherry-innovations-startup-policy-2019",
+      "title": "Puducherry - Innovations & Startup Policy 2019",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Industries and Commerce, Puducherry",
+      "officialSource": "Startup India State Policies",
+      "sourceUrl": "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Puducherry-state-policy.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-cyber-swachhta-kendra",
+      "title": "Cyber Swachhta Kendra (Botnet Cleaning and Malware Analysis Centre)",
+      "category": "cybersecurity-initiative",
+      "schemeType": "Central",
+      "department": "Indian Computer Emergency Response Team (CERT-In), Ministry of Electronics and Information Technology",
+      "officialSource": "Cyber Swachhta Kendra (CERT-In)",
+      "sourceUrl": "https://www.csk.gov.in/about.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-i4c-scheme",
+      "title": "Indian Cybercrime Coordination Centre (I4C) Scheme",
+      "category": "cybersecurity-initiative",
+      "schemeType": "Central",
+      "department": "Ministry of Home Affairs",
+      "officialSource": "Ministry of Home Affairs",
+      "sourceUrl": "https://www.mha.gov.in/en/division_of_mha/cyber-and-information-security-cis-division/Details-about-Indian-Cybercrime-Coordination-Centre-I4C-Scheme",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "telangana-ai-framework-2020",
+      "title": "Telangana's AI Framework 2020",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Information Technology, Electronics & Communications Department, Government of Telangana",
+      "officialSource": "Government of Telangana",
+      "sourceUrl": "https://invest.telangana.gov.in/emerging-technologies/",
+      "applyUrl": null,
+      "applyStatus": null,
+      "subcategory": "ai-policy"
+    },
+    {
+      "id": "tamil-nadu-safe-ethical-ai-policy-2020",
+      "title": "Tamil Nadu Safe and Ethical Artificial Intelligence Policy 2020",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Information Technology and Digital Services Department, Government of Tamil Nadu",
+      "officialSource": "Tamil Nadu State Planning Commission (SPC)",
+      "sourceUrl": "https://spc.tn.gov.in/policy/tamil-nadu-safe-and-ethical-artificial-intelligence-policy-2020/",
+      "applyUrl": null,
+      "applyStatus": null,
+      "subcategory": "ai-policy"
+    },
+    {
+      "id": "tamil-nadu-cyber-security-policy-2020",
+      "title": "Tamil Nadu Cyber Security Policy 2020",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Information Technology and Digital Services Department, Government of Tamil Nadu",
+      "officialSource": "Tamil Nadu State Planning Commission (SPC)",
+      "sourceUrl": "https://spc.tn.gov.in/policy/tamil-nadu-cybersecurity-policy-2020/",
+      "applyUrl": null,
+      "applyStatus": null,
+      "subcategory": "cybersecurity-policy"
+    },
+    {
+      "id": "tamil-nadu-csirt-tn-mission",
+      "title": "CSIRT-TN Mission",
+      "category": "cybersecurity-initiative",
+      "schemeType": "State",
+      "department": "Government of Tamil Nadu",
+      "officialSource": "CSIRT-TN",
+      "sourceUrl": "https://csirt.tn.gov.in/mission.html",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "kerala-cert-k",
+      "title": "Computer Emergency Response Team-Kerala (CERT-K)",
+      "category": "cybersecurity-initiative",
+      "schemeType": "State",
+      "department": "Electronics & Information Technology Department, Government of Kerala",
+      "officialSource": "Kerala State IT Mission (KSITM)",
+      "sourceUrl": "https://itmission.kerala.gov.in/projects/cert-kerala-cert-k",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "karnataka-cyseck-coe-cybersecurity",
+      "title": "CySecK - Centre of Excellence in Cybersecurity",
+      "category": "centre-of-excellence",
+      "schemeType": "State",
+      "department": "Department of Electronics, IT and BT, Government of Karnataka",
+      "officialSource": "CySecK Official Portal",
+      "sourceUrl": "https://cyseck.in/industry-and-startups",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-genesis-meity",
+      "title": "Gen-Next Support for Innovative Startups (GENESIS)",
+      "category": "startup-program",
+      "schemeType": "Central",
+      "department": "Ministry of Electronics and Information Technology (MeitY)",
+      "officialSource": "MeitY Startup Hub",
+      "sourceUrl": "https://msh.meity.gov.in/schemes/genesis",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-samridh-meity",
+      "title": "Startup Accelerator of MeitY for Product Innovation, Development, and Growth (SAMRIDH)",
+      "category": "accelerator",
+      "schemeType": "Central",
+      "department": "Ministry of Electronics and Information Technology (MeitY)",
+      "officialSource": "MeitY Startup Hub",
+      "sourceUrl": "https://msh.meity.gov.in/schemes/samridh",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-tide-2-meity",
+      "title": "Technology Incubation and Development of Entrepreneurs (TIDE 2.0)",
+      "category": "incubator",
+      "schemeType": "Central",
+      "department": "Ministry of Electronics and Information Technology (MeitY)",
+      "officialSource": "MeitY Startup Hub",
+      "sourceUrl": "https://msh.meity.gov.in/schemes/tide",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-sasact-meity",
+      "title": "Scheme for Accelerating Startups around Post COVID Technology Opportunities (SASACT)",
+      "category": "grant",
+      "schemeType": "Central",
+      "department": "Ministry of Electronics and Information Technology (MeitY)",
+      "officialSource": "MeitY Startup Hub",
+      "sourceUrl": "https://msh.meity.gov.in/schemes/sasact",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-dli-meity",
+      "title": "Design Linked Incentive (DLI) Scheme",
+      "category": "grant",
+      "schemeType": "Central",
+      "department": "Ministry of Electronics and Information Technology (MeitY)",
+      "officialSource": "Ministry of Electronics and Information Technology",
+      "sourceUrl": "https://www.meity.gov.in/content/design-linked-incentive-scheme",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-maarg-dpiit",
+      "title": "MAARG (Mentorship, Advisory, Assistance, Resilience, and Growth)",
+      "category": "startup-program",
+      "schemeType": "Central",
+      "department": "Department for Promotion of Industry and Internal Trade (DPIIT)",
+      "officialSource": "Startup India",
+      "sourceUrl": "https://maarg.startupindia.gov.in/",
+      "applyUrl": "https://maarg.startupindia.gov.in/",
+      "applyStatus": null
+    },
+    {
+      "id": "central-nidhi-prayas",
+      "title": "NIDHI-PRAYAS (Promoting and Accelerating Young and Aspiring Innovators and Startups)",
+      "category": "grant",
+      "schemeType": "Central",
+      "department": "Department of Science and Technology",
+      "officialSource": "National Initiative for Developing and Harnessing Innovations (NIDHI)",
+      "sourceUrl": "https://nidhi.dst.gov.in/schemes-programmes/nidhiprayas/",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-bionest-birac",
+      "title": "BioNEST Scheme",
+      "category": "incubator",
+      "schemeType": "Central",
+      "department": "Biotechnology Industry Research Assistance Council (BIRAC), Department of Biotechnology",
+      "officialSource": "BIRAC",
+      "sourceUrl": "https://birac.nic.in/bionest.php",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-rdif-tdb-slfm",
+      "title": "RDIF–TDB as Second Level Fund Manager (SLFM)",
+      "category": "grant",
+      "schemeType": "Central",
+      "department": "Technology Development Board, Department of Science and Technology",
+      "officialSource": "Technology Development Board",
+      "sourceUrl": "https://tdb.gov.in/rdi_slfm",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-atal-new-india-challenge",
+      "title": "Atal New India Challenge (ANIC)",
+      "category": "grant",
+      "schemeType": "Central",
+      "department": "Atal Innovation Mission, NITI Aayog",
+      "officialSource": "Atal Innovation Mission",
+      "sourceUrl": "https://aim.gov.in/atal-new-india-challenge.php",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-acic-aim",
+      "title": "Atal Community Innovation Centre (ACIC)",
+      "category": "incubator",
+      "schemeType": "Central",
+      "department": "Atal Innovation Mission, NITI Aayog",
+      "officialSource": "Atal Innovation Mission",
+      "sourceUrl": "https://aim.gov.in/acic-overview.php",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-arise-anic-aim",
+      "title": "Aatmanirbhar Bharat ARISE–ANIC",
+      "category": "grant",
+      "schemeType": "Central",
+      "department": "Atal Innovation Mission, NITI Aayog",
+      "officialSource": "Atal Innovation Mission",
+      "sourceUrl": "https://aim.gov.in/arise.php",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "central-indiaai-compute-capacity",
+      "title": "IndiaAI Compute Capacity",
+      "category": "ai-initiative",
+      "schemeType": "Central",
+      "department": "Ministry of Electronics and Information Technology (MeitY)",
+      "officialSource": "INDIAai",
+      "sourceUrl": "https://indiaai.gov.in/hub/indiaai-compute-capacity",
+      "applyUrl": "https://compute.indiaai.gov.in/login",
+      "applyStatus": null
+    },
+    {
+      "id": "central-cert-in-ccmp",
+      "title": "Cyber Crisis Management Plan (CCMP)",
+      "category": "cybersecurity-initiative",
+      "schemeType": "Central",
+      "department": "Indian Computer Emergency Response Team (CERT-In), Ministry of Electronics and Information Technology",
+      "officialSource": "CERT-In",
+      "sourceUrl": "https://www.cert-in.org.in/s2cMainServlet?pageid=CCMP",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "karnataka-elevate-2025",
+      "title": "ELEVATE 2025",
+      "category": "grant",
+      "schemeType": "State",
+      "department": "Department of Electronics, IT, BT and Science & Technology, Government of Karnataka",
+      "officialSource": "Startup Karnataka",
+      "sourceUrl": "https://eitbt.karnataka.gov.in/startup/public/135/elevate---2025/en",
+      "applyUrl": "https://registration.eitbt.karnataka.gov.in/ktechregistration/dist/#/auth/login",
+      "applyStatus": "temporarily_unreachable"
+    },
+    {
+      "id": "karnataka-cyber-security-policy-2024",
+      "title": "Karnataka Cyber Security Policy 2024",
+      "category": "policy",
+      "schemeType": "State",
+      "department": "Department of Electronics, Information Technology, Biotechnology and Science & Technology, Government of Karnataka",
+      "officialSource": "Government of Karnataka",
+      "sourceUrl": "https://eitbt.karnataka.gov.in/178/cybersecurity-policy-2024---incentives-application/en",
+      "applyUrl": null,
+      "applyStatus": null,
+      "subcategory": "cybersecurity-policy"
+    },
+    {
+      "id": "central-nasscom-deeptech-accelerate",
+      "title": "nasscom DeepTech Club Accelerate",
+      "category": "accelerator",
+      "schemeType": "Central",
+      "department": "nasscom",
+      "officialSource": "nasscom",
+      "sourceUrl": "https://nasscom.in/deeptech/deeptechclub/accelerate.php",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "karnataka-ktech-coe-ai-c-camp",
+      "title": "K-tech CoE - AI C-CAMP",
+      "category": "centre-of-excellence",
+      "schemeType": "State",
+      "department": "Department of Electronics, IT, BT and Science & Technology, Government of Karnataka",
+      "officialSource": "K-tech / EITBT Karnataka",
+      "sourceUrl": "https://eitbt.karnataka.gov.in/168/k-tech-coe---ai-c-camp/en",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "karnataka-coe-minro",
+      "title": "Centre of Excellence for Machine Intelligence and Robotics (CoE-MINRO)",
+      "category": "centre-of-excellence",
+      "schemeType": "State",
+      "department": "Department of Electronics, IT, BT and Science & Technology, Government of Karnataka",
+      "officialSource": "K-tech / EITBT Karnataka",
+      "sourceUrl": "https://eitbt.karnataka.gov.in/it/public/129/minro-%28machine-intelligence-and-robotics%29/en",
+      "applyUrl": null,
+      "applyStatus": null
+    },
+    {
+      "id": "karnataka-coe-automotive-tech",
+      "title": "Centre of Excellence in Automotive Technology",
+      "category": "centre-of-excellence",
+      "schemeType": "State",
+      "department": "Department of Electronics, IT, BT and Science & Technology, Government of Karnataka",
+      "officialSource": "K-tech / EITBT Karnataka",
+      "sourceUrl": "https://eitbt.karnataka.gov.in/esdm/public/129/coe-automotive-tech/en",
+      "applyUrl": null,
+      "applyStatus": null
+    }
+  ]
+}

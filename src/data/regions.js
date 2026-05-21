@@ -43,14 +43,16 @@ export const UNION_TERRITORIES = [
 export const CENTRAL_GOVERNMENT = 'Central Government'
 
 export const ALLOWED_SOURCE_DOMAINS = [
-  'indiaai.gov.in',
   'meity.gov.in',
-  'digitalindia.gov.in',
-  'cert-in.org.in',
-  'cybercrime.gov.in',
   'startupindia.gov.in',
-  'pib.gov.in',
+  'dpiit.gov.in',
+  'tdb.gov.in',
+  'indiaai.gov.in',
+  'cert-in.org.in',
+  'mha.gov.in',
   'niti.gov.in',
+  'nasscom.in',
+  'cyseck.in',
   'gov.in',
   'nic.in',
 ]
