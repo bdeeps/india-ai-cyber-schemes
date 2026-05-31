@@ -84,6 +84,9 @@ function enrichSchemeForUi(scheme) {
 function buildSidebarCounts(schemes, uiState) {
   const { searchQuery, activeFilters, latestOnly, includePolicies } = uiState
   const counts = {}
+  const centralSchemes = schemes
+    .filter((scheme) => scheme.schemeType === 'Central')
+    .map(enrichSchemeForUi)
 
   for (const region of [...STATES, ...UNION_TERRITORIES]) {
     const stateSchemes = schemes
@@ -92,6 +95,7 @@ function buildSidebarCounts(schemes, uiState) {
 
     counts[region.name] = countSidebarOpportunitiesForRegion(
       { id: region.id, stateSchemes },
+      centralSchemes,
       searchQuery,
       activeFilters,
       latestOnly,

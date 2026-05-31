@@ -215,17 +215,29 @@ export function isFilterActive(activeFilters, filterId) {
   return normalizeActiveFilters(activeFilters).has(filterId)
 }
 
-/** Sidebar badge: state opportunities only unless Include Policies is on. */
+/** Sidebar badge: visible opportunities for a region (state + central unless scope-filtered). */
 export function countSidebarOpportunitiesForRegion(
   region,
+  centralSchemes,
   searchQuery,
   activeFilters,
   latestOnly,
   includePolicies,
 ) {
   if (!region) return 0
+
+  const filters = normalizeActiveFilters(activeFilters)
+  const scopeFilters = [...filters].filter((filter) => SCOPE_FILTER_IDS.has(filter))
+  const includeState = scopeFilters.length === 0 || scopeFilters.includes(FILTERS.STATE)
+  const includeCentral = scopeFilters.length === 0 || scopeFilters.includes(FILTERS.CENTRAL)
+
+  const schemePool = [
+    ...(includeState ? region.stateSchemes ?? [] : []),
+    ...(includeCentral ? centralSchemes ?? [] : []),
+  ]
+
   const filtered = filterSchemes(
-    region.stateSchemes ?? [],
+    schemePool,
     searchQuery,
     activeFilters,
     latestOnly,
@@ -254,9 +266,12 @@ export function useSidebarRegionCounts(
     const counts = {}
     if (!directory) return counts
 
+    const centralSchemes = directory.centralSchemes ?? []
+
     for (const region of directory.regions ?? []) {
       counts[region.id] = countSidebarOpportunitiesForRegion(
         region,
+        centralSchemes,
         searchQuery,
         activeFilters,
         latestOnly,
